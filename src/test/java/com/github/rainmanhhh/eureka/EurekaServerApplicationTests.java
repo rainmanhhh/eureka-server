@@ -1,4 +1,4 @@
-package ez.spring.eureka;
+package com.github.rainmanhhh.eureka;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
