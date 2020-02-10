@@ -1,85 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://maven.apache.org/POM/4.0.0"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <groupId>org.springframework.boot</groupId>
-            </plugin>
-        </plugins>
-    </build>
-    <description>out of box eureka server</description>
-    <groupId>com.github.rainmanhhh</groupId>
-    <artifactId>eureka-server</artifactId>
-    <modelVersion>4.0.0</modelVersion>
-    <name>eureka-server</name>
-    <parent>
-        <artifactId>spring-boot-starter-parent</artifactId>
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>eureka-server</artifactId>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>spring-boot-maven-plugin</artifactId>
         <groupId>org.springframework.boot</groupId>
-        <relativePath />
-        <version>2.2.4.RELEASE</version> <!-- lookup parent from repository -->
-    </parent>
-
-    <properties>
-        <java.version>8</java.version>
-        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
-    </properties>
-
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+      <groupId>org.springframework.cloud</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+      <groupId>org.springframework.cloud</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <artifactId>jaxb-api</artifactId>
+      <groupId>javax.xml.bind</groupId>
+      <version>2.3.1</version>
+    </dependency>
+    <dependency>
+      <artifactId>jaxb-core</artifactId>
+      <groupId>com.sun.xml.bind</groupId>
+      <version>2.3.0</version>
+    </dependency>
+    <dependency>
+      <artifactId>jaxb-impl</artifactId>
+      <groupId>com.sun.xml.bind</groupId>
+      <version>2.3.2</version>
+    </dependency>
+    <dependency>
+      <artifactId>javax.activation-api</artifactId>
+      <groupId>javax.activation</groupId>
+      <version>1.2.0</version>
+    </dependency>
+  </dependencies>
+  <dependencyManagement>
     <dependencies>
-        <dependency>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <groupId>org.springframework.cloud</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-            <groupId>org.springframework.cloud</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <groupId>org.springframework.boot</groupId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <groupId>org.springframework.boot</groupId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <artifactId>jaxb-api</artifactId>
-            <groupId>javax.xml.bind</groupId>
-            <version>2.3.1</version>
-        </dependency>
-        <dependency>
-            <artifactId>jaxb-core</artifactId>
-            <groupId>com.sun.xml.bind</groupId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
-            <artifactId>jaxb-impl</artifactId>
-            <groupId>com.sun.xml.bind</groupId>
-            <version>2.3.2</version>
-        </dependency>
-        <dependency>
-            <artifactId>javax.activation-api</artifactId>
-            <groupId>javax.activation</groupId>
-            <version>1.2.0</version>
-        </dependency>
+      <dependency>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <groupId>org.springframework.cloud</groupId>
+        <scope>import</scope>
+        <type>pom</type>
+        <version>${spring-cloud.version}</version>
+      </dependency>
     </dependencies>
+  </dependencyManagement>
+  <description>out of box eureka server</description>
+  <groupId>com.github.rainmanhhh</groupId>
+  <modelVersion>4.0.0</modelVersion>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <groupId>org.springframework.cloud</groupId>
-                <scope>import</scope>
-                <type>pom</type>
-                <version>${spring-cloud.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+  <name>eureka-server</name>
 
-    <version>0.0.1</version>
+  <parent>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <relativePath />
+    <version>2.2.4.RELEASE</version> <!-- lookup parent from repository -->
+  </parent>
+
+  <properties>
+    <java.version>8</java.version>
+    <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+  </properties>
+
+  <version>0.0.1</version>
 
 </project>
