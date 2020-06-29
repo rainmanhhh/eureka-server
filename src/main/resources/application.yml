@@ -1,3 +1,10 @@
+spring:
+  application:
+    name: eureka-server
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
 server:
   port: 8761
 eureka:
@@ -9,3 +16,6 @@ eureka:
     fetch-registry: false
   server:
     response-cache-auto-expiration-in-seconds: 5
+logging:
+  level:
+    "com.netflix.eureka.registry.AbstractInstanceRegistry": warn
