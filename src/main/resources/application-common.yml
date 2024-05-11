@@ -13,5 +13,10 @@ eureka:
   server:
     response-cache-auto-expiration-in-seconds: 5
 logging:
+  file:
+    name: logs/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 100MB
   level:
     "com.netflix.eureka.registry.AbstractInstanceRegistry": warn
