@@ -1,3 +1,5 @@
+server:
+  port: 7777 # 使用非默认的8761端口，服务注册时通过nginx的8761端口（/eureka/apps/路径）转发，以避免非授权访问ui主界面
 management:
   server:
     port: 7761 # actuator使用独立端口，以避免非授权访问漏洞
