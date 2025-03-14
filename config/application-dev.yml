@@ -1,0 +1,3 @@
+management:
+  server:
+    port: 7761 # actuator使用独立端口，以避免非授权访问漏洞
